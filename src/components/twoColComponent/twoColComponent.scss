@@ -1,0 +1,43 @@
+.twoColComponent {
+    $root: &;
+
+    &__wraper {
+        display: flex;
+        width: 100%;
+        padding: 0 10px;
+
+        &-col {
+            width: 50%;
+            margin: 0 10px;
+            padding: 20px;
+            visibility: hidden;
+
+            &--bgGreen{
+                visibility: visible;
+                background-color: $green;
+            }
+
+
+            &--bgYellow{
+                visibility: visible;
+                background-color: $yellow;
+            }
+
+            &--bgRed{
+                visibility: visible;
+                background-color: $red;
+            }
+        }
+
+    }
+
+    &__buttonWraper{
+        width:100%;
+        display: flex;
+        justify-content: center;
+
+        button{
+            margin-top: 20px;
+        }
+    }
+}

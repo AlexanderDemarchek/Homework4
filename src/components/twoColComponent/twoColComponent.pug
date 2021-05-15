@@ -1,0 +1,19 @@
+mixin twoColComponent(props)
+    .twoColComponent&attributes(attributes)
+        .twoColComponent__wraper
+            .twoColComponent__wraper-col.twoColComponent__wraper-col--bgGreen
+                p Абзац
+                p Абзац
+                p Абзац
+            .twoColComponent__wraper-col.twoColComponent__wraper-col--bgYellow.twoColComponent__wraper-col--bgRed
+                ul
+                    li Элемент
+                    li Элемент
+                    li Элемент
+                ol
+                    li Первый
+                    li Второй
+                    li Третий
+        .twoColComponent__buttonWraper
+            button Клик
+
