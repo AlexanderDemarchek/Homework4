@@ -1,0 +1,9 @@
+.form {
+    $root: &;
+    padding: 40px;
+
+    &__input{
+        margin-bottom: 20px;
+    }
+
+}

@@ -13,6 +13,7 @@ import Header from '../../components/header/header';
 import Footer from '../../components/footer/footer';
 import Modal from '../../components/modal/modal';
 import TwoColComponent from "../../components/twoColComponent/twoColComponent";
+import Form from "../../components/form/form";
 
 fromEvent(document, 'DOMContentLoaded').subscribe(() => {
   new Header(getComponent('header'));
@@ -23,6 +24,9 @@ fromEvent(document, 'DOMContentLoaded').subscribe(() => {
 
   if (getComponent('twoColComponent').component)
     getComponents('twoColComponent').forEach((component) => new TwoColComponent(component));
+
+  if (getComponent('form').component)
+    getComponents('form').forEach((component) => new Form(component));
 
 
   const images = document.querySelectorAll('img');

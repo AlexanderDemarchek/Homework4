@@ -1,5 +1,6 @@
 .input {
     $root: &;
+    display: block;
     position: relative;
 
     input {
@@ -14,5 +15,11 @@
             color: $gray;
             font-size: 16px;
         }
+
+    }
+
+    &__label{
+        padding-left: 6px;
+        margin-bottom: 10px;
     }
 }

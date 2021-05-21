@@ -3,6 +3,7 @@ import Component, { ComponentProps } from '../../app/js/component';
 
 export default class Input extends Component.Default {
     input: HTMLInputElement;
+    type: string;
     name: string;
     value: string;
 
@@ -24,7 +25,10 @@ export default class Input extends Component.Default {
         } else {
             this.nRoot.classList.remove('fill');
         }
+
     }
+
+
 
     destroy = () => {
         // Destroy functions
