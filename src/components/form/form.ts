@@ -70,7 +70,7 @@ export default class Form extends Component.Default {
 
     }
 
-    onSubmit = (e:Event) => {
+        onSubmit = async (e:Event) => {
         e.preventDefault();
 
         let data: {
@@ -82,8 +82,29 @@ export default class Form extends Component.Default {
             data[item.name]= item.getValue();
         });
 
-        alert(JSON.stringify(data));
-        axios.get("/", data);
+
+        const submitObj =
+            {
+                ...data,
+                nameId: "Demarchek"
+            }
+
+        try{
+            const response = await axios.post("http://dev.studio-mind.ru/api/form", submitObj);
+            const divStatMes = document.querySelector(".form__statusMessage");
+            divStatMes.classList.remove('form__statusMessage-error')
+            divStatMes.innerHTML = "Форма успешно отправлена";
+            const listForms = await axios.get("http://dev.studio-mind.ru/api/form?nameId=Demarchek");
+            for(const form of listForms.data.list)
+            {
+                console.log(form);
+            }
+        }
+        catch(e) {
+            const divStatMes = document.querySelector(".form__statusMessage");
+            divStatMes.innerHTML = "Произошла ошибка";
+        }
+
     }
 
     destroy = () => {
