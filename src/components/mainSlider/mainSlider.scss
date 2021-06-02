@@ -1,0 +1,41 @@
+.mainSlider {
+    $root: &;
+    display: flex;
+
+    &__container, &__container-second, &__container-third{
+        height: 600px;
+        width: 32%;
+
+        &-wrapper{
+
+
+            .swiper-slide{
+                padding: 200px 100px;
+                img{
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    object-fit: cover;
+                    width: 100%;
+                    height: 100%;
+                    z-index: -1;
+                }
+
+                &__text{
+                    display: flex;
+                    flex-direction: column;
+                    color: white;
+                    width: 100%;
+                    h2{
+                        font-size: 30px;
+                        margin-bottom: 20px;
+                    }
+
+                    p{
+                        font-size: 120%;
+                    }
+                }
+            }
+        }
+    }
+}

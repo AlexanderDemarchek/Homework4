@@ -1,0 +1,34 @@
+mixin mainSlider(props)
+    .mainSlider&attributes(attributes)
+        .swiper-container.mainSlider__container
+            .swiper-wrapper.mainSlider__container-wrapper
+                each slide in dataJson.mainSlider
+                    .swiper-slide
+                        +img({src: slide.image})
+                        .swiper-slide__text
+                            h2(data-swiper-parallax="-500")= slide.title
+                            p(data-swiper-parallax="-1000")= slide.description
+
+        .swiper-container.mainSlider__container-second
+            .swiper-wrapper.mainSlider__container-wrapper
+                each slide,index in dataJson.mainSlider
+                    - let i = (index+1) % dataJson.mainSlider.length;
+                    - let currentSlide = dataJson.mainSlider[i];
+                    .swiper-slide
+                        +img({src: currentSlide.image})
+                        .swiper-slide__text
+                            h2(data-swiper-parallax-x="-500")= currentSlide.title
+                            p(data-swiper-parallax-x="-1000")= currentSlide.description
+
+        .swiper-container.mainSlider__container-third
+            .swiper-wrapper.mainSlider__container-wrapper
+                each slide,index in dataJson.mainSlider
+                    - let i = (index+2) % dataJson.mainSlider.length;
+                    - let currentSlide = dataJson.mainSlider[i];
+                    .swiper-slide
+                        +img({src: currentSlide.image})
+                        .swiper-slide__text
+                            h2(data-swiper-parallax="-500")= currentSlide.title
+                            p(data-swiper-parallax="-1000")= currentSlide.description
+
+

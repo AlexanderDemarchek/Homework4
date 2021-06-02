@@ -1,0 +1,17 @@
+[
+  {
+    "title": "Слайд 1",
+    "description": "Текст певого слайда",
+    "image": "../../assets/img/1.jpg"
+  },
+  {
+    "title": "Слайд 2",
+    "description": "Текст второго слайда",
+    "image": "../../assets/img/2.jpg"
+  },
+  {
+    "title": "Слайд 3",
+    "description": "Текст третьего слайда",
+    "image": "../../assets/img/3.jpg"
+  }
+]
